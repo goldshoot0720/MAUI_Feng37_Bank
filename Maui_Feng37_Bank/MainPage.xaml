@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maui_Feng37_Bank.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+
+            <!-- Image Control -->
+            <Image Source="fb_img_1679551455397.jpg" HorizontalOptions="Start"
+                   HeightRequest="333"
+                   SemanticProperties.Description="dot net bot in a hovercraft number nine" />
+
+            <!-- Financial Institution Picker -->
+            <HorizontalStackLayout Spacing="50" HorizontalOptions="Start">
+                <Label Text="金融機構：" Style="{StaticResource Headline}" HorizontalOptions="Start" />
+                <Picker SelectedIndexChanged="OnPickerSelectedIndexChanged" HorizontalOptions="Start">
+                    <Picker.Items>
+                        <x:String>(006)合作金庫</x:String>
+                        <x:String>(013)國泰世華</x:String>
+                        <x:String>(017)兆豐銀行</x:String>
+                        <x:String>(048)王道銀行</x:String>
+                        <x:String>(103)新光銀行</x:String>
+                        <x:String>(396)街口支付</x:String>
+                        <x:String>(700)中華郵政</x:String>
+                        <x:String>(808)玉山銀行</x:String>
+                        <x:String>(812)台新銀行</x:String>
+                        <x:String>(822)中國信託</x:String>
+                    </Picker.Items>
+                </Picker>
+            </HorizontalStackLayout>
+
+            <!-- Deposit Amount and Accumulated Deposit -->
+            <HorizontalStackLayout Spacing="50" HorizontalOptions="Start">
+                <Label Text="存款金額：" Style="{StaticResource Headline}" HorizontalOptions="Start"/>
+                <Entry x:Name="amountEntry"
+                       Placeholder="請輸入金額"
+                       Keyboard="Numeric"
+                       WidthRequest="200"
+                       HorizontalOptions="Start" />
+            </HorizontalStackLayout>
+
+            <!-- Use a Label instead of Entry for Read-Only Text, aligned to the left -->
+            <HorizontalStackLayout Spacing="50" HorizontalOptions="Start">
+                <Label Text="累積存款：" Style="{StaticResource Headline}" HorizontalOptions="Start" />
+                <Label x:Name="amountEntry2"
+                       Text="" 
+                       Style="{StaticResource Headline}"
+                       HorizontalOptions="Start" />
+            </HorizontalStackLayout>
+
+            <!-- Button Layout -->
+            <HorizontalStackLayout Spacing="20" HorizontalOptions="Start">
+                <Button x:Name="button1" Text="修改" Clicked="Button1_Click1" WidthRequest="100" HorizontalOptions="Start"/>
+                <Button x:Name="button2" Text="存檔" Clicked="Button1_Click2" WidthRequest="100" HorizontalOptions="Start"/>
+                <Button x:Name="button3" Text="彩蛋" Clicked="Button1_Click3" WidthRequest="100" HorizontalOptions="Start"/>
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
